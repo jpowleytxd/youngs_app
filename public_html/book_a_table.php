@@ -245,7 +245,7 @@ if($results === true){
     <h2>Make a booking enquiry at</h2>
     <h1><?php echo $venueName; ?></h1>
 
-    <script src="http://partners.designmynight.com/pf/js?venue_id=<?php echo $bookingID; ?>"></script>
+    <script src="https://partners.designmynight.com/pf/js?venue_id=<?php echo $bookingID; ?>"></script>
 
 </body>
 
