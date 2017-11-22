@@ -169,7 +169,7 @@ body#LIVE #live_title, body#LIVE #live_section{
 <section id="demo_section">
     <a href="demo_page.php?demo=Book%20A%20Table&page=book_a_table.php" style="border-top: 1px solid #fff;">Book A Table</a>
     <a href="demo_page.php?demo=All%20Offers&page=all_offers.php">All Offers</a>
-    <a href="demo_page.php?demo=App%20Offers&page=current_offers.php">Current Offers</a>
+    <a href="demo_page.php?demo=Current%20Offers&page=current_offers.php">Current Offers</a>
     <!-- <a href="happy_hour.php">Happy Hour</a> -->
     <a href="demo_page.php?demo=Privacy%20Policy&page=heritage.php">Heritage (Youngs)</a>
     <!-- <a href="demo_page.php?demo=Allergens&page=allergens.php">Allergens</a> -->
