@@ -62,7 +62,7 @@ header{
 }
 
 header nav{
-    width: calc(100% - 40px);
+    width: calc(100%);
     display: block;
     position: relative;
     margin-left: auto;
