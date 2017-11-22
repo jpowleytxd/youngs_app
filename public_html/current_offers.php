@@ -2,7 +2,7 @@
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 //--------------------------------------Youngs App------------------------------------
-//-----------------------------------All Offers Page----------------------------------
+//----------------------------------Current Offers Page-------------------------------
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 
@@ -204,11 +204,11 @@ if($results === true){
 <!DOCTYPE html>
 <html>
 <head>
-	<title>All Offers</title>
+	<title>Current Offers</title>
 
     <meta charset="UTF-8">
-    <meta name="description" content="Youngs All Offers App Page">
-    <meta name="keywords" content="youngs, all, offers">
+    <meta name="description" content="Youngs Current Offers App Page">
+    <meta name="keywords" content="youngs, current, offers">
     <meta name="author" content="Zonal Marketing technologies">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -227,7 +227,7 @@ if($results === true){
 </div>
 <div class="wrapper">
     <header>
-        <img src="media/headers/all_offers.png" alt="All Offers">
+        <img src="media/headers/current_offers.png" alt="Current Offers">
     </header>
     <div class="clearfix"></div>
     <!-- 
