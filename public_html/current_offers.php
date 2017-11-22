@@ -57,6 +57,11 @@ function printOffer($offer, $expires, $time){
                     echo '<p>' . $text . '</p>';
                 }
             echo '</div>';
+
+            // Check if link has been provided
+            if(isset($offer['offer_external_link']) && !empty($offer['offer_external_link'])){
+                echo '<a href="' . $offer['offer_external_link'] . '" class="tile_button" style="color: ' . $offer['offer_title_colour'] . '; border-color: ' . $offer['offer_title_colour'] . ';">View</a>';
+            }
         echo '</div>';
         echo '<div class="tile_front">';
             echo '<img src="' . $offer['offer_tile_image_url'] . '" alt="' . $offer['offer_title'] . ' ' . $offer['offer_sub_title'] . '">';
@@ -220,6 +225,12 @@ if($results === true){
     <meta name="keywords" content="youngs, current, offers">
     <meta name="author" content="Zonal Marketing technologies">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <?php
+    // Get fonts and echo out
+    $fonts = file_get_contents('partials/_bespoke_fonts.php');
+    echo $fonts;
+    ?>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="css/youngs_offers.css?2=3">
