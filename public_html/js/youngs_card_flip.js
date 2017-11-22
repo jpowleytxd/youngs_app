@@ -89,6 +89,11 @@ $(window).on("load", function(){
 
         });
     }, 1000);
+
+    // Detect click on view button and prevent click through
+    $('.tile_button').on('click', function(event){
+        event.stopPropagation();
+    });
 });
 
 // Wait for all images to load then display the back of tiles
