@@ -171,7 +171,7 @@ body#LIVE #live_title, body#LIVE #live_section{
     <a href="demo_page.php?demo=All%20Offers&page=all_offers.php">All Offers</a>
     <a href="demo_page.php?demo=Current%20Offers&page=current_offers.php">Current Offers</a>
     <!-- <a href="happy_hour.php">Happy Hour</a> -->
-    <a href="demo_page.php?demo=Privacy%20Policy&page=heritage.php">Heritage (Youngs)</a>
+    <a href="demo_page.php?demo=Heritage&page=heritage.php">Heritage (Youngs)</a>
     <!-- <a href="demo_page.php?demo=Allergens&page=allergens.php">Allergens</a> -->
     <a href="demo_page.php?demo=Terms%20%26%20Conditions&page=terms_and_conditions.php">Terms And Conditions (Youngs)</a>
 </section>
