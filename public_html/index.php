@@ -171,6 +171,7 @@ body#LIVE #live_title, body#LIVE #live_section{
     <a href="demo_page.php?demo=All%20Offers&page=all_offers.php">All Offers</a>
     <a href="demo_page.php?demo=Current%20Offers&page=current_offers.php">Current Offers</a>
     <!-- <a href="happy_hour.php">Happy Hour</a> -->
+    <a href="demo_page.php?demo=FAQ&page=faq.php">FAQ (Youngs)</a>
     <a href="demo_page.php?demo=Heritage&page=heritage.php">Heritage (Youngs)</a>
     <!-- <a href="demo_page.php?demo=Allergens&page=allergens.php">Allergens</a> -->
     <a href="demo_page.php?demo=Terms%20%26%20Conditions&page=terms_and_conditions.php">Terms And Conditions (Youngs)</a>
@@ -189,6 +190,10 @@ body#LIVE #live_title, body#LIVE #live_section{
             <tr>
                 <td>Current Offers</td>
                 <td>https://youngs-uat.txdclientdemos.co.uk/current_offers.php</td>
+            </tr>
+            <tr>
+                <td>FAQ</td>
+                <td>https://youngs-uat.txdclientdemos.co.uk/faq.php</td>
             </tr>
             <tr>
                 <td>Heritage</td>
@@ -221,6 +226,10 @@ body#LIVE #live_title, body#LIVE #live_section{
                 <td>https://youngs-live.txdclientdemos.co.uk/current_offers.php</td>
             </tr>
             <tr>
+                <td>FAQ</td>
+                <td>https://youngs-live.txdclientdemos.co.uk/faq.php</td>
+            </tr>
+            <tr>
                 <td>Heritage</td>
                 <td>https://youngs-live.txdclientdemos.co.uk/heritage.php</td>
             </tr>
@@ -240,6 +249,7 @@ body#LIVE #live_title, body#LIVE #live_section{
     <a href="all_offers.php">All Offers</a>
     <a href="current_offers.php">Current Offers</a>
     <!-- <a href="happy_hour.php">Happy Hour</a> -->
+    <a href="faq.php">FAQ (Youngs)</a>
     <a href="heritage.php">Heritage (Youngs)</a>
     <!-- <a href="allergens.php">Allergens</a> -->
     <a href="terms_and_conditions.php">Terms And Conditions (Youngs)</a>
