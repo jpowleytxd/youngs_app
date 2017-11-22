@@ -156,7 +156,7 @@ if($results === true){
 
         body {
             padding: 30px 10px;
-            background: #f4f0e6 url('background.jpg') top center no-repeat;
+            background: #f4f0e6 url('media/img/background.jpg') top center no-repeat;
             background-size: 100%;
             font-family: 'Delta Jager', sans-serif;
         }
