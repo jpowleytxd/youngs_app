@@ -1,0 +1,420 @@
+/*------------------------------------------------*/
+/*-------------------Youngs App-------------------*/
+/*--------------Happy Hour Styling----------------*/
+/*------------------------------------------------*/
+
+/*------------------------------------------------*/
+/*------------------Minimal Reset-----------------*/
+/*------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix{
+    clear: both;
+}
+
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+/*----------------Component Styling---------------*/
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+body{
+    font-family: "DeltaLight", san-serif;
+    font-size: 16px;
+}
+
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    position: relative;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/*------------------------------------------------*/
+/*------------------Header Styling----------------*/
+/*------------------------------------------------*/
+header{
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+h1{
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-bottom: 15px;
+    font-family: "DeltaMedium", san-serif;
+    font-size: 2rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+h2{
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+/*-----------------Countdown Clock----------------*/
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+
+/*------------------------------------------------*/
+/*---------------Clock Outer Layer----------------*/
+/*------------------------------------------------*/
+.countdown_container{
+    width: 100%;
+    height: 90vw;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.countdown_track{
+    width: 100%;
+    height: 90vw;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+}
+
+.countdown_slider{
+    width: 100%;
+    height: 90vw;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+}
+
+.progress{
+    width: 100%;
+    height: 90vw;
+    display: block;
+    position: absolute;
+    left: 0px;
+}
+
+.demo{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.demo :first-child{
+    margin-bottom: 20px;
+}
+
+.progress{
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.progress__meter, .progress__value{
+    fill: none;
+}
+
+/*------------------------------------------------*/
+/*------------Before Happy Hour Begins------------*/
+/*------------------------------------------------*/
+.before_inner{
+    width: 92.5%;
+    height: 82.5vw;
+    z-index: 30;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.before_upper_title{
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -25%);
+    transform: translate(-50%, -25%);
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.before_lower_title{
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -75%);
+    transform: translate(-50%, -75%);
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.time_container{
+    width: 70%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    text-align: center;
+}
+
+/*------------------------------------------------*/
+/*-----------Countdown Inner Components-----------*/
+/*------------------------------------------------*/
+.countdown_inner{
+    width: 92.5%;
+    height: 82.5vw;
+    z-index: 20;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.countdown_upper_title{
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -25%);
+    transform: translate(-50%, -25%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.countdown_lower_title{
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -75%);
+    transform: translate(-50%, -75%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.timer_container{
+    width: 80%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.hours_container{
+    width: 30%;
+    display: block;
+    position: relative;
+    float: left;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.minutes_container{
+    width: 30%;
+    display: block;
+    position: relative;
+    float: left;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.seconds_container{
+    width: 30%;
+    display: block;
+    position: relative;
+    float: left;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.spacer_container{
+    width: 5%;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+.spacer{
+    width: 100%;
+    display: block;
+    position: relative;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/*------------------------------------------------*/
+/*--------------After Happy Hour Ends-------------*/
+/*------------------------------------------------*/
+.ended_inner{
+    width: 92.5%;
+    height: 82.5vw;
+    z-index: 10;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.ended_upper_title{
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    -webkit-transform: translate(-50%, -25%);
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ended_lower_title{
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    -webkit-transform: translate(-50%, -75%);
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.day_container{
+    width: 70%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*------------------------------------------------*/
+/*------------------Footer Styling----------------*/
+/*------------------------------------------------*/
+footer{
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-top: 20px;
+}
+
+footer p{
+    width: 100%;
+    height: 50px;
+    display: block;
+    position: relative;
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 50px
+}
+
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+/*------------------Brand Styling-----------------*/
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+
+/*------------------------------------------------*/
+/*-------------------Hungry Horse-----------------*/
+/*------------------------------------------------*/
+body#youngs .wrapper{
+    background: #f4f0e7;
+    background-size: cover;
+}
+
+body#youngs h1{
+    color: #383838;
+}
+
+body#youngs h2{
+    color: #383838;
+    font-weight: lighter;
+}
+
+body#youngs .before_inner{
+    background: #f4f0e7;
+}
+
+body#youngs .countdown_inner{
+    background: #f4f0e7;
+}
+
+body#youngs .ended_inner{
+    background: #f4f0e7;
+}
+
+body#youngs .progress__meter{
+    stroke: #f4f0e7;
+}
+body#youngs .progress__value{
+    stroke: #6379af;
+}
+
+body#youngs .before_inner,
+body#youngs .countdown_upper_title,
+body#youngs .timer_container,
+body#youngs .ended_upper_title , 
+body#youngs .day_container, 
+body#youngs .ended_lower_title {
+    color: #383838;
+}
+
+body#youngs footer p{
+    color: #383838;
+}

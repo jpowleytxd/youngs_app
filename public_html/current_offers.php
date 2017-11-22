@@ -72,7 +72,9 @@ function printOffer($offer, $expires, $time){
 //------------------------------------------------------------------------------------
 
 $aztecID;
-$happyHourOn;
+$happyHourOn = false;
+$happyHourOffer = array();
+$currentOffers = array();
 
 // GET environment
 $environment = getenv('ENVIRONMENT');
@@ -179,21 +181,28 @@ if($results === true){
     // Fetch results 
     $results = $selectQuery->fetchAll(PDO::FETCH_ASSOC);
 
-    // Starting date for weekly cycle
-    $startWeek = 44;
-
-    $ddate = date('Y-m-d');
-    $duedt = explode("-", $ddate);
-    $date  = mktime(0, 0, 0, $duedt[1], $duedt[2], $duedt[0]);
-    $weekNumber  = (int)date('W', $date);
-
-    $currentNumber = abs(intval($startWeek) - intval($weekNumber)) + 1;
-
-    while($currentNumber > 12){
-        $currentNumber = $currentNumber - 12;
-    }
-
     $today = strtolower(date("D"));
+
+    // Go through results, add to array, search for Happy Hour
+    foreach($results as $result){
+        // Get dates from object
+        $dates = json_decode($result['offer_times'], true);
+
+        // Check if current day
+        foreach($dates['DAYS'] as $day){
+            if($day === $today){
+                // printOffer($result, false, "");
+                
+                // Check if happy hour
+                if($result['offer_type'] === "happy_hour"){
+                    $happyHourOn = true;
+                    array_push($happyHourOffer, $result);
+                } else{
+                    array_push($currentOffers, $result);
+                }
+            }
+        }
+    }
 
 } else{
     // No venue found display fallback
@@ -221,7 +230,7 @@ if($results === true){
     <script src="js/youngs_card_flip.js"></script>
 </head>
 
-<body id="<?php echo $brand; ?>">
+<body>
 <div class="loading">
 
 </div>
@@ -235,8 +244,64 @@ if($results === true){
         flipped         - flipped state of tile
     -->
     <?php
-        foreach($results as $result){
-            printOffer($result, false, "");
+        // Print each happy hour tile
+        foreach($happyHourOffer as $result){
+            // Get dates from object
+            $dates = json_decode($result['offer_times'], true);
+            // Check if current day
+            foreach($dates['DAYS'] as $day){
+                if($day === $today){
+                    // Check times
+                    if($dates['TIMES'][0] !== "all"){
+                        // Check times are valid
+                        foreach($dates['TIMES'] as $time){
+                            if(strtolower($time['DAY']) === strtolower($today)){
+                                // Get times
+                                $startTime = intval(preg_replace("/:/", "", $time['START']));
+                                $currentTime = intval(date("His"));
+                                $endTime = intval(preg_replace("/:/", "", $time['END']));
+                                if(($startTime < $currentTime) && ($currentTime < $endTime)){
+                                    // Print happy hour countdown tile
+                                    echo '<!-- Happy Hour Iframe -->';
+                                    echo '<iframe src="happy_hour.php?brand=youngs&id=' . $result['offer_id'] . '" style="" id="happy_hour_container" scrolling="no"></iframe>';
+
+                                    // Print happy hour tile
+                                    printOffer($result, true, $time['END']);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ?>
+
+    <?php
+        foreach($currentOffers as $result){
+            // Get dates from object
+            $dates = json_decode($result['offer_times'], true);
+            // Check if current day
+            foreach($dates['DAYS'] as $day){
+                if($day === $today){
+                    // Check times
+                    if($dates['TIMES'][0] === "all"){
+                        printOffer($result, false, "");
+                    } else{
+                        // Check times are valid
+                        foreach($dates['TIMES'] as $time){
+                            if(strtolower($time['DAY']) === strtolower($today)){
+                                // Get times
+                                $startTime = intval(preg_replace("/:/", "", $time['START']));
+                                $currentTime = intval(date("His"));
+                                $endTime = intval(preg_replace("/:/", "", $time['END']));
+                                if(($startTime < $currentTime) && ($currentTime < $endTime)){
+                                    printOffer($result, true, $time['END']);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     ?>
 </div>

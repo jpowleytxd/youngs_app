@@ -221,7 +221,7 @@ if($results === true){
     <script src="js/youngs_card_flip.js"></script>
 </head>
 
-<body id="<?php echo $brand; ?>">
+<body>
 <div class="loading">
 
 </div>
