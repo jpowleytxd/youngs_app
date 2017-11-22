@@ -28,8 +28,8 @@ $dotenv = new Dotenv\Dotenv('../');
  */
 function printFallback(){
     // Redirect
-    // header("Location: /fallback/youngs_all_offers_fallback.php");
-    // die();
+    header("Location: /fallback/youngs_all_offers_fallback.php");
+    die();
 }
 
 /**
