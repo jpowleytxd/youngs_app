@@ -23,6 +23,12 @@ $environment = getenv('ENVIRONMENT');
 <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0 user-scalable=no">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
+<?php
+// Get fonts and echo out
+$fonts = file_get_contents('partials/_bespoke_fonts.php');
+echo $fonts;
+?>
+
 <style>
 
 *{
@@ -32,7 +38,7 @@ $environment = getenv('ENVIRONMENT');
 }
 
 body{
-  font-family: 'Opens Sans', san-serif;
+  font-family: "DeltaLight", san-serif;
 }
 
 header{
@@ -44,7 +50,6 @@ header{
   padding-left: 20px;
   padding-right: 20px;
   background: #fff;
-  border-bottom: 1px solid #383838;
 }
 
 img{
@@ -73,7 +78,7 @@ section{
   display: none;
   position: relative;
   padding-top: 40px;
-  background: #ffffff;
+  background: #383838;
 }
 
 a{
@@ -83,17 +88,17 @@ a{
   position: relative;
   padding-left: 20px;
   padding-right: 20px;
-  color: #383838;
+  color: #ffffff;
   font-size: 16px;
   text-align: left;
   text-decoration: none;
   line-height: 40px;
-  border-bottom: 1px solid #383838;
+  border-bottom: 1px solid #ffffff;
 }
 
 a:hover{
-  background: #383838;
-  color: #ffffff;
+  background: #ffffff;
+  color: #383838;
 }
 
 span{
@@ -109,13 +114,13 @@ span{
 
 table{
   width: 100%;
-  color: #383838;
+  color: #ffffff;
   padding: 0;
   border-collapse: collapse;
 }
 
 tr:first-of-type td{
-  border-top: 1px solid #383838;
+  border-top: 1px solid #ffffff;
 }
 
 td{
@@ -123,7 +128,7 @@ td{
   height: 40px;
   padding-left: 20px;
   padding-right: 20px;
-  border-bottom: 1px solid #383838;;
+  border-bottom: 1px solid #ffffff;
 }
 
 td:first-of-type{
@@ -154,7 +159,7 @@ body#LIVE #live_title, body#LIVE #live_section{
 <body id="<?php echo $environment ?>">
 
 <header>
-  <img src="http://www.youngs.co.uk/assets/templates/default/img/brand-logo.png" alt="Greene King">
+  <img src="http://www.youngs.co.uk/assets/templates/default/img/brand-logo.png" alt="Youngs">
   <h1 id="demo_title">Demo Links</h1>
   <h1 id="staging_title">Staging Links</h1>
   <h1 id="live_title">Live Links</h1>
@@ -170,7 +175,7 @@ body#LIVE #live_title, body#LIVE #live_section{
   <!-- <a href="happy_hour.php?brand=locals">Happy Hour (Locals)</a> -->
   <!-- <a href="season_ticket.php?brand=hungry_horse">Season Ticket (Hungry Horse)</a> -->
   <a href="demo_page.php?demo=Terms%20%26%20Conditions&page=terms_and_conditions.php">Terms And Conditions (Youngs)</a>
-  <a href="demo_page.php?demo=Privacy%20Policy&page=privacy_policy.php">Privacy Policy (Youngs)</a>
+  <a href="demo_page.php?demo=Privacy%20Policy&page=heritage.php">Heritage (Youngs)</a>
 </section>
 <section id="staging_section">
     <table>
@@ -200,8 +205,8 @@ body#LIVE #live_title, body#LIVE #live_section{
                 <td>https://youngs-uat.txdclientdemos.co.uk/terms_and_conditions.php</td>
             </tr>
             <tr>
-                <td>Privacy Policy</td>
-                <td>https://youngs-uat.txdclientdemos.co.uk/privacy_policy.php</td>
+                <td>Heritage</td>
+                <td>https://youngs-uat.txdclientdemos.co.uk/heritage.php</td>
             </tr>
         </tbody>
     </table>
@@ -234,8 +239,8 @@ body#LIVE #live_title, body#LIVE #live_section{
                 <td>https://youngs-live.txdclientdemos.co.uk/terms_and_conditions.php</td>
             </tr>
             <tr>
-                <td>Privacy Policy</td>
-                <td>https://youngs-live.txdclientdemos.co.uk/privacy_policy.php</td>
+                <td>heritage</td>
+                <td>https://youngs-live.txdclientdemos.co.uk/heritage.php</td>
             </tr>
         </tbody>
     </table>
@@ -249,6 +254,6 @@ body#LIVE #live_title, body#LIVE #live_section{
   <a href="happy_hour.php?brand=locals">Happy Hour (Locals)</a>
   <!-- <a href="season_ticket.php?brand=hungry_horse">Season Ticket (Hungry Horse)</a> -->
   <a href="terms_and_conditions.php">Terms And Conditions (Youngs)</a>
-<a href="privacy_policy.php">Privacy Policy (Youngs)</a>
+<a href="heritage.php">Heritage (Youngs)</a>
 </section>
 </body>
