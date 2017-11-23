@@ -151,7 +151,7 @@ if(isset($currentTime) && isset($startTime) && isset($endTime)){
                     <div class="before_lower_title">Be Ready...</div>
                 </div>
                 <div class="countdown_inner">
-                    <div class="countdown_upper_title">Ending In...</div>
+                    <div class="countdown_upper_title">Ending In</div>
                     <div class="timer_container">
                     <div class="hours_container" id="hours" data-time="<?php echo $endHour ?>">00</div>
                     <div class="spacer_container">
@@ -173,7 +173,7 @@ if(isset($currentTime) && isset($startTime) && isset($endTime)){
                 </div>
             <?php } else if($status === 'on'){ ?> <!-- HAPPY HOUR IS ON NOW -->
                 <div class="countdown_inner">
-                    <div class="countdown_upper_title">Ending In...</div>
+                    <div class="countdown_upper_title">Ending In</div>
                     <div class="timer_container">
                     <div class="hours_container" id="hours" data-time="<?php echo $endHour ?>">00</div>
                     <div class="spacer_container">

@@ -208,15 +208,16 @@ h2{
     width: 100%;
     display: block;
     position: absolute;
-    top: 25%;
+    top: 40%;
     left: 50%;
-    -webkit-transform: translate(-50%, -25%);
-    transform: translate(-50%, -25%);
-    font-size: 1.5rem;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: "DeltaMedium", sans-serif;
+    font-size: 1.4rem;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: -1px;
+    letter-spacing: 1px;
 }
 
 .countdown_lower_title{
@@ -225,8 +226,8 @@ h2{
     position: absolute;
     top: 75%;
     left: 50%;
-    -webkit-transform: translate(-50%, -75%);
-    transform: translate(-50%, -75%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
@@ -238,7 +239,7 @@ h2{
     width: 80%;
     display: block;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
