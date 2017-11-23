@@ -157,6 +157,14 @@ header img{
     color: inherit;
 }
 
+.tile_qr{
+    width: 60%;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .tile_footer{
     width: 100%;
     display: block;

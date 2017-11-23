@@ -52,6 +52,9 @@ function printOffer($offer, $expires, $time){
         echo '<div class="tile_back" style="background: ' . $offer['offer_background_colour'] . ';">';
             echo '<div class="tile_title" style="color: ' . $offer['offer_title_colour'] . ';">' . $offer['offer_title'] . '</div>';
             echo '<div class="tile_sub_title" style="color: ' . $offer['offer_text_colour'] . ';">' . $offer['offer_sub_title'] . '</div>';
+            if(($offer['offer_id'] == 1) || ($offer['offer_id'] == 2) || ($offer['offer_id'] == 5)){
+                echo '<img src="http://chart.apis.google.com/chart?cht=qr&chl=Zonal Marketing Tech&chs=200x200" class="tile_qr">';
+            }
             echo '<div class="tile_text" style="color: ' . $offer['offer_text_colour'] . ';">';
                 foreach($tileText['text'] as $text){
                     echo '<p>' . $text . '</p>';
